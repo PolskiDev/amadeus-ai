@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat GPT</title>
+    <script src="../public/chatgpt-client.js?v=12"></script>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    
+</head>
+<body onload="OnLoad()">
+
+    <div id="idContainer">
+        <hr>
+        <p id="txtOutput" rows="10" style="margin-top: 10px; width: 100%;" 
+         placeholder="Elyzia">Elyzia:</p>
+        <hr>
+        <div>
+            <select id="selLang" onchange="ChangeLang(this)">
+                <option value="pt-BR">Português (Brazil)</option>
+                <option value="en-US">English (United States)</option>
+                <option value="es-ES">Español (Spain)</option>
+                <option value="fr-FR">Français (France)</option>
+                <option value="ru-RU">Russian (Russia)</option>
+                <option value="pl-PL">Polski (Poland)</option>
+                <option value="nl-NL">Nederlands (Netherlands)</option>
+            </select>
+
+            <select id="selVoices"></select>
+        </div>
+
+        <textarea id="txtMsg" rows="5" wrap="soft" style="width: 98%; 
+         margin-left: 3px; margin-top: 6px" placeholder="Você"></textarea>
+
+        <button type="button" onclick="Send()" id="btnSend">OK</button>
+            <input id="chkSpeak" type="button" 
+             onclick="SpeechToText()" value="Listen">
+            <label id="lblMute"><input id="chkMute" type="checkbox" 
+             onclick="Mute(this.checked)"/>Sem voz</label>
+
+
+        <div id="idText"></div>
+    </div>
+
+</body>
+</html>
