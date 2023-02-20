@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <link rel="shortcut icon" href="../public/assets/gifs/6425ba35111741.56e9d649dbfee.gif" type="image/x-icon">
+    <title>Amadeus AI</title>
+
+    <script src="../public/chatgpt-client.js?v=12"></script>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-fixed/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        background-image: url('../public/assets/gifs/data-center.jpg');
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="navbar-top-fixed.css" rel="stylesheet">
+  </head>
+  <body onload="OnLoad()">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand"><img src="../public/assets/gifs/main_cube.png" width="40px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link">Amadeus AI</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://openai.com/blog/chatgpt/">ChatGPT — Developer Mode</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main role="main" class="container">
+  <div class="jumbotron">
+    <!--h1>Sistema Amadeus</h1>
+    <p class="lead">Desenvolvido como um <i>fork</i> da plataforma <a href="">ChatGPT</a> </p-->
+
+    <div id="idContainer" align="center">
+      <!--hr-->
+      <p id="txtOutput" rows="10" style="margin-top: 10px; width: 100%;" 
+       placeholder="Amadeus" onclick="ClearOutputBox()"></p>
+      <hr>
+      <div>
+          <img src="../public/assets/icons/microphone.jpg" width="120px"
+          id="chkSpeak" 
+          onclick="SpeechToText()"><br>
+          <img src="../public/assets/icons/openai.png" width="90px">
+          <p>Powered by ChatGPT</p>
+          <h4>Amadeus</h4>
+          <div id="idText"></div>
+          <br>
+            <select id="selLang" class="custom-select" style="width:200px;" onchange="ChangeLang(this)">
+              <option value="pt-BR">Português (Brazil)</option>
+              <option value="en-US">English (United States)</option>
+              <option value="es-ES">Español (Spain)</option>
+              <option value="fr-FR">Français (France)</option>
+              <option value="ru-RU">Russian (Russia)</option>
+              <option value="pl-PL">Polski (Poland)</option>
+              <option value="nl-NL">Dutch (Netherlands)</option>
+            </select>
+        
+          <select id="selVoices" class="custom-select" style="width:200px;"></select>
+      </div>
+
+      <textarea id="txtMsg" rows="5" wrap="soft" style="width: 98%; 
+       margin-left: 3px; margin-top: 6px" placeholder="Send a message..." class="form-control-md"></textarea><br><br>
+
+      <button type="button" class="btn btn-success" style="width: 90%;" onclick="Send()" id="btnSend">OK</button>
+      <br><br><br>
+      <button type="button" class="btn btn-danger" style="width: 90%;" onclick="Cancel()" id="btnCancel">Stop speaking</button>
+      <!--br><br><br-->
+
+      <label id="lblMute" style="display: none;"><input id="chkMute" type="checkbox" 
+      onclick="Mute(this.checked)">Mudo</label>
+      <br><br>
+
+      <!--audio id="boot_sound" src="../public/sounds/boot2.mp3" style="display: none;"></audio-->
+      
+  </div>
+  
+  </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</html>
